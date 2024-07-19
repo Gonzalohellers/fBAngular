@@ -1,0 +1,7 @@
+.instagramLogo {
+    font-size: 3em;
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
