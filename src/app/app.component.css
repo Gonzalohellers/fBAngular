@@ -1,3 +1,21 @@
+footer{
+  max-width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+header{
+  background: rgb(236, 0, 0);
+  background: linear-gradient(180deg, rgba(236, 0, 0, 0.253) 5%, rgba(0,212,255,0) 90%);
+   width: 98.8vw;
+}
+
+.paraguasFooter{
+height: 500px;
+width: 500px;
+}
+
 .instagramLogo {
     font-size: 3em;
     background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);

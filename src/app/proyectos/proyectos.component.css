@@ -1,0 +1,36 @@
+.galeria{
+    padding: 1rem 2rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-rows: 24rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1.5fr));
+}
+.capitulo{
+    overflow: hidden;
+    margin: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 0.3rem;
+    min-width: 25vw;
+    color:#333;
+}
+.capitulo
+h3{
+    font-size: x-large;
+}
+
+.galeria .capitulo .more-text {
+    display: none;
+}
+
+.galeria .capitulo .read-more {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.galeria .capitulo button:hover {
+    color: #026ddf;
+}

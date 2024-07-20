@@ -5,8 +5,8 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { routes } from './app.routes';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-
+import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 
 
@@ -19,4 +19,16 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'flownBrolly';
+  isHomeRoute: boolean = false;
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.router.events.pipe(
+      filter((event: any): event is NavigationEnd => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.isHomeRoute = event.url === '/home';
+    });
+  }
+
 }

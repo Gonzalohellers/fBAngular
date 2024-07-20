@@ -1,4 +1,4 @@
-<header class="bg-gray-800 text-white p-4">
+<header  [ngClass]="{'absolute': isHomeRoute, 'text-white p-4 backdrop:opacity-50': true}">
   <div class="container mx-auto flex justify-between items-center">
     <h5 class="text-2xl font-bold">FlownBrolly</h5>
     <nav>
@@ -7,7 +7,7 @@
         <li><a routerLink="/proyectos" class="hover:text-gray-400 transition-colors">Proyectos</a></li>
         <li><a routerLink="/equipos" class="hover:text-gray-400 transition-colors">Equipos</a></li>
         <li><a href="#" class="hover:text-gray-400 transition-colors">Sobre Nosotros</a></li>
-        <li><a href="#" class="hover:text-green-600 transition-colors text-green-400">Unite</a></li>
+        <li><a href="#" class="hover:text-green-600 transition-colors text-green-400">Unirse</a></li>
       </ul>
     </nav>
   </div>
@@ -15,6 +15,7 @@
 <router-outlet></router-outlet>
 
 <footer class="mt-24">
+  <div class="textoyredes">
     <div>
       <span class="instagramLogo">
         <i class="fa-brands fa-square-instagram" style="overflow: hidden;"></i>
@@ -30,5 +31,7 @@
         <i class="fa-brands fa-square-x-twitter" style="overflow: hidden;"></i>
       </span>
     </div>
-    <img src="../../assets/paraguas.png" alt="paraguas" srcset="" class="w-11 h-11">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam voluptas consequatur doloremque magnam a debitis, aliquam veniam quidem, cum fugiat et repudiandae veritatis doloribus! Magnam a quam et pariatur soluta.</p>
+  </div>
+    <img src="../../assets/paraguas.png" alt="paraguas"  srcset="" class="w-40 h-40">
 </footer>

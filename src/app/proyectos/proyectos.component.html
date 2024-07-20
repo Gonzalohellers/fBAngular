@@ -1,1 +1,10 @@
-<div></div>
+<div class="galeria">
+    <div class="capitulo" *ngFor="let capitulo of capitulos">
+        <img [src]="capitulo.img" alt="">
+        <h3>{{ capitulo.titulo }}</h3>
+        <p>
+            {{ capitulo.texto | slice:0:100 }}<span *ngIf="capitulo.mostrarMas">{{ capitulo.texto | slice:100 }}</span>
+        </p>
+        <button (click)="toggleReadMore(capitulo)">{{ capitulo.mostrarMas ? 'Leer menos' : 'Leer más' }}</button>
+    </div>
+</div>
