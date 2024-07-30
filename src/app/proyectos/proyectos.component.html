@@ -1,6 +1,6 @@
 <div class="galeria">
-    <div class="capitulo" *ngFor="let capitulo of capitulos">
-        <img [src]="capitulo.img" alt="">
+    <div class="capitulo" *ngFor="let capitulo of capitulos" [routerLink]="['/proyectos', capitulo.id]">
+        <img [src]="capitulo.img" alt="" class="rounded-lg">
         <h3>{{ capitulo.titulo }}</h3>
         <p>
             {{ capitulo.texto | slice:0:100 }}<span *ngIf="capitulo.mostrarMas">{{ capitulo.texto | slice:100 }}</span>

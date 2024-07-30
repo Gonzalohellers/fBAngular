@@ -1,20 +1,26 @@
-<header  [ngClass]="{'absolute': isHomeRoute, 'text-white p-4 backdrop:opacity-50': true}">
-  <div class="container mx-auto flex justify-between items-center">
-    <h5 class="text-2xl font-bold">FlownBrolly</h5>
-    <nav>
-      <ul class="flex space-x-4">
+<header Class="fixed 'text-white p-4 backdrop:opacity-50': true">
+  <div class="container mx-auto md:flex justify-between items-center">
+    <div class="flex justify-between">
+      <h5 class="text-2xl font-bold">FlownBrolly</h5>
+      <button class="md:hidden" (click)="abrirMenu()">Menu</button>
+    </div>
+    <nav [ngClass]="{'visible': menu, 'max-sm:hidden': !menu}" class="md:visible nav">
+      <ul class="md:flex space-x-4">
         <li><a routerLink="/home" class="hover:text-gray-400 transition-colors">Inicio</a></li>
         <li><a routerLink="/proyectos" class="hover:text-gray-400 transition-colors">Proyectos</a></li>
-        <li><a routerLink="/equipos" class="hover:text-gray-400 transition-colors">Equipos</a></li>
-        <li><a href="#" class="hover:text-gray-400 transition-colors">Sobre Nosotros</a></li>
-        <li><a href="#" class="hover:text-green-600 transition-colors text-green-400">Unirse</a></li>
+        <li><a href="/unirse" class="hover:text-green-600 transition-colors text-green-400">Unirse</a></li>
       </ul>
     </nav>
   </div>
 </header>
 <router-outlet></router-outlet>
 
-<footer class="mt-24">
+<div class="dark">
+  <div>
+  </div>
+</div>
+
+<footer class="mt-52">
   <div class="textoyredes">
     <div>
       <span class="instagramLogo">
@@ -31,7 +37,9 @@
         <i class="fa-brands fa-square-x-twitter" style="overflow: hidden;"></i>
       </span>
     </div>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam voluptas consequatur doloremque magnam a debitis, aliquam veniam quidem, cum fugiat et repudiandae veritatis doloribus! Magnam a quam et pariatur soluta.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam voluptas consequatur doloremque magnam a
+      debitis, aliquam veniam quidem, cum fugiat et repudiandae veritatis doloribus! Magnam a quam et pariatur soluta.
+    </p>
   </div>
-    <img src="../../assets/paraguas.png" alt="paraguas"  srcset="" class="w-40 h-40">
+  <img src="../../assets/paraguas.png" alt="paraguas" srcset="" class="w-40 h-40">
 </footer>

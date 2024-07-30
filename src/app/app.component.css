@@ -1,14 +1,36 @@
 footer{
   max-width: 95vw;
+  justify-content: center;
   margin: 0 auto;
+  padding: 1rem 0;
   display: flex;
   flex-direction: row;
+}
+
+.dark div{
+  margin: 7rem auto 1rem auto;
+  border-bottom:solid 1px grey;
+  width:90%;
+  height:50px;
+}
+
+.textoyredes div{
+  margin-bottom: 2rem;
+}
+
+.textoyredes div span{
+  margin-left: 10rem;
+}
+
+.textoyredes div span:hover{
+cursor: pointer;
 }
 
 header{
   background: rgb(236, 0, 0);
   background: linear-gradient(180deg, rgba(236, 0, 0, 0.253) 5%, rgba(0,212,255,0) 90%);
    width: 98.8vw;
+   z-index: 10;
 }
 
 .paraguasFooter{

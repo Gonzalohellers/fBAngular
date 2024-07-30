@@ -1,4 +1,6 @@
-
+header{
+    position: fixed;
+}
 
 .portada{
     background-image: url("../../assets/Portada.png");
@@ -23,4 +25,9 @@
     margin-top: 0;
     height: 15rem;
     width: 15rem;
+}
+
+.containerDos{
+    display: flex;
+    flex-direction: row;
 }

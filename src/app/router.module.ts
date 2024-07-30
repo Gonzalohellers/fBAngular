@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AboutUsComponent } from './about-us/about-us.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { ProyectoComponent } from './proyecto/proyecto.component';
 
 const routes: Routes = [
   { path: "", redirectTo: 'home', pathMatch: 'full' },
+  { path: 'proyectos/:id', component: ProyectoComponent },
   { path: 'home', component: InicioComponent },
-  { path: "equipos", component: AboutUsComponent },
   { path: "proyectos", component: ProyectosComponent }
 ];
 
